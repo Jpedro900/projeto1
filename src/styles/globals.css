@@ -8,3 +8,10 @@
   font-weight: bolder;
   color: yellow;
 } 
+
+.btnPadrao{
+  display: flex;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 10px;
+}
