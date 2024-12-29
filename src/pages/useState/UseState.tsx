@@ -9,7 +9,7 @@ export default function UseState() {
     c++;
     setCont(c);
   }
-  function sub(){
+  function sub() {
     let c = cont;
     c--;
     setCont(c);
@@ -18,11 +18,7 @@ export default function UseState() {
   return (
     <div>
       UseState
-      <DisplayState valor={cont}></DisplayState>
-      <div className=" flex gap-5">
-          <button className=" btnPadrao" onClick={add}>somar</button>
-          <button className=" btnPadrao" onClick={sub}>subtrair</button>
-      </div>
+      <DisplayState valor={cont} fadd={add} fsub={sub}></DisplayState>
     </div>
   );
 }
