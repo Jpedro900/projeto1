@@ -17,7 +17,7 @@ export default function DisplayState(props: DisplayStateProps) {
         {props.valor}
       </div>
       <div className=" flex gap-5">
-        <button className=" btnPadrao" onClick={()=>operacao(+1)}>
+        <button className=" btnPadrao" onClick={()=>operacao(1)}>
           somar
         </button>
         <button className=" btnPadrao" onClick={()=>operacao(-1)}>

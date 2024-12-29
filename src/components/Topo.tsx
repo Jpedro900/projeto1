@@ -36,6 +36,13 @@ function Topo(props: any) {
         >
           State
         </Link>
+        <Link
+          href={{
+            pathname: "/inputs/inputs",
+          }}
+        >
+          inputs
+        </Link>
       </nav>
     </div>
   );
