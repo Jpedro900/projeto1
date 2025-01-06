@@ -3,21 +3,35 @@ import { useState } from "react";
 
 export default function inputs() {
   const [nome, setNome] = useState("");
-  const [idade, setIdade] = useState("");
+  const [linguagem, setLinguagem] = useState("");
 
   return (
     <div>
       <Topo />
       <div className="campoForm">
         <label htmlFor="name">nome</label>
-        <input type="text" name="name" value={nome} onChange={(e)=>setNome(e.target.value)}/>
+        <input
+          type="text"
+          name="name"
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+        />
       </div>
       <div className="campoForm">
-        <label htmlFor="name">idade</label>
-        <input type="number" name="name" value={idade} onChange={(e)=>setIdade(e.target.value)}/>
+        <label htmlFor="name">Linguagem</label>
+        <select
+          value={linguagem}
+          onChange={(e) => setLinguagem(e.target.value)}
+        >
+          <option value="JavaScript">JavaScript</option>
+          <option value="TypeScript">TypeScript</option>
+          <option value="C">C</option>
+          <option value="C++">C++</option>
+          <option value="Python">Python</option>
+        </select>
       </div>
-      <div>Nome{nome}</div>
-      <div>Idade{idade}</div>
+      <div>Nome: {nome}</div>
+      <div>Linguagem: {linguagem}</div>
     </div>
   );
 }
