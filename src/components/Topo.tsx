@@ -14,10 +14,6 @@ function Topo(props: any) {
         <Link
           href={{
             pathname: "/produtos/Produtos",
-            query:{
-              nome: 'Joao',
-              idade: '25',
-            }
           }}
         >
           Produtos
@@ -42,6 +38,12 @@ function Topo(props: any) {
           }}
         >
           inputs
+        </Link>
+        <Link
+          href={{
+            pathname: "/useEffect/useEffect"
+          }}>
+            UseEffect
         </Link>
       </nav>
     </div>

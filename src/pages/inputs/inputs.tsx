@@ -1,9 +1,22 @@
 import Topo from "@/components/Topo";
-import { useState } from "react";
+import { useState , useEffect } from "react";
+import Globais from "@/components/Globais";
+
+const linguagens = ["JS", "TS", "C", "PY", "CPP"];
 
 export default function inputs() {
   const [nome, setNome] = useState("");
   const [linguagem, setLinguagem] = useState("");
+
+  useEffect(() =>{
+    Globais.idade='24'
+  },[])
+
+  function flinguagens() {
+    return linguagens.map((c: any) => {
+      return <option value={c}>{c}</option>;
+    });
+  }
 
   return (
     <div>
@@ -23,15 +36,16 @@ export default function inputs() {
           value={linguagem}
           onChange={(e) => setLinguagem(e.target.value)}
         >
-          <option value="JavaScript">JavaScript</option>
-          <option value="TypeScript">TypeScript</option>
-          <option value="C">C</option>
-          <option value="C++">C++</option>
-          <option value="Python">Python</option>
+          {flinguagens()}
         </select>
       </div>
       <div>Nome: {nome}</div>
       <div>Linguagem: {linguagem}</div>
+      <div>
+        <p>{Globais.linguagem}</p>
+        <p>{Globais.nome}</p>
+        <p>{Globais.idade}</p>
+      </div>
     </div>
   );
 }
